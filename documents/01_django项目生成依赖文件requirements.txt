@@ -9,6 +9,6 @@ pip freeze > requirements.txt
 使用pip install -r requirements.txt 即可快速安装相关依赖
 
 
-Jason comments: 以上第2步验证可行
+20190715: jason comments: 以上第2步验证可行
 
 
