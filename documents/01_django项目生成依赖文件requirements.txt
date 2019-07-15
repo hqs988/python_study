@@ -1,0 +1,14 @@
+django项目完成后,需要了解此项目所依赖的库有哪些可以使用以下进行生成依赖包文件
+1.在cmd中或pycharm使用终端标签项切换到django的项目根目录
+
+2.生成依赖文件
+pip freeze > requirements.txt
+此会自动搜索工程中的所有依赖包名及相关版本到requirements.txt文件中
+
+3. 如果需要部署相关的工程,安装此文件中的依赖即可
+使用pip install -r requirements.txt 即可快速安装相关依赖
+
+
+Jason comments: 以上第2步验证可行
+
+
