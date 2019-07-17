@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f0c9d00-6300-411f-ab2f-3f667f683661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +21,11 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -43,6 +47,7 @@
         <option value="$PROJECT_DIR$/basic/list/1.py" />
         <option value="$PROJECT_DIR$/documents/01_django项目生成依赖文件requirements.txt" />
         <option value="$PROJECT_DIR$/python_study_app/service/analyses.py" />
+        <option value="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" />
       </list>
     </option>
   </component>
@@ -197,11 +202,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563204099990</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="# jason :　pycharm 与 git 结合">
+      <created>1563354575658</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563354575658</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6253000" />
+    <option name="totallyTimeSpent" value="6271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -214,6 +226,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -318,7 +331,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
