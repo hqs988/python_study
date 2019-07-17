@@ -9,6 +9,7 @@
 list1 = ['one', 'two']
 print(list1)
 
+
 # 整型
 list2 = [1, 2, 3]
 print(list2)
