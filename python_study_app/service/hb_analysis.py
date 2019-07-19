@@ -36,11 +36,13 @@ fo = open("foo.txt", "w")  # foo.txt 记录算法结果
 # ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些函数
 # ----------------------------------------------------------------------------------------------------------------------
+
+# 字符串转float型
 def as_num(x):
     y = '{:.8f}'.format(x)
     return (y)
 
-
+# 初始化交易币列表
 def f_init_symbols_list():
     global vl_symbols_list
     vl_symbols_list = []
@@ -49,7 +51,7 @@ def f_init_symbols_list():
     # print(len(vl_symbols_list))
     # print(vl_symbols_list)
 
-
+# 初始化eth 交易对列表
 def f_init_eth_symbols_list():
     global vl_symbols_list
     global vl_eth_symbols_list
@@ -62,7 +64,7 @@ def f_init_eth_symbols_list():
     print(vl_eth_symbols_list)
     # print(len(vl_eth_symbols_list))
 
-
+# 初始化交易对 实时记录 字典列表
 def f_init_dict():
     global dict
     global vl_eth_symbols_list
@@ -70,7 +72,7 @@ def f_init_dict():
     dict = dict.fromkeys(vl_eth_symbols_list, [0, 0, 0, 0, 0])
     print(dict)
 
-
+# 实时更新交易对 价格, 只刷新每个交易对 最新的5次价格， 供算法分析之用
 def f_update_dict_rtc_price():
     global vl_eth_symbols_list
     global dict
@@ -93,7 +95,7 @@ def f_update_dict_rtc_price():
             print("except " + str(i) + " " + vl_eth_symbols_list[i])
     print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
 
-# 过滤错误情况
+# 算法分析1
 def f_algorithm_1():
     global vl_eth_symbols_list
     global dict
