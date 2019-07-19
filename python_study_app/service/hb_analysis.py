@@ -3,9 +3,9 @@
 import requests
 import time
 
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些全局变量
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 
 
 # currencys_url="https://api.huobi.br.com/market/history/kline?period=1min&size=200&symbol=xmxeth"
@@ -33,9 +33,9 @@ dict = {}  # 用于记录每个eth交易对，5个实时、最新的值，供不
 fo = open("foo.txt", "w")  # foo.txt 记录算法结果
 
 
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些函数
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 def as_num(x):
     y = '{:.8f}'.format(x)
     return (y)
@@ -110,18 +110,14 @@ def f_algorithm_1():
         # step 2:进行逻辑判断
         if float(value[0]) < float(value[1]) and float(value[1]) < float(value[2]) and float(value[2]) < float(value[3]) and float(value[3])<float(value[4]):
             if float(value[0]) * 1.05 < float(value[4]):  # 1.05
-                # print("######")
-                #
-                # print(vl_eth_symbols_list[i])
-                # print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
-                # print(dict[vl_eth_symbols_list[i]])
-                fo.write(vl_eth_symbols_list[i])
-                fo.write("  ")
-                fo.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
-                fo.write("  ")
-                fo.write(str(dict[vl_eth_symbols_list[i]]))
-                fo.write("  \n")
-                fo.flush()
+                if float(value[0]) != 0:  # 过滤掉此处情况  [0] = 0   [1] [2] [3] [4]----> 递增
+                    fo.write(vl_eth_symbols_list[i])
+                    fo.write("  ")
+                    fo.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
+                    fo.write("  ")
+                    fo.write(str(dict[vl_eth_symbols_list[i]]))
+                    fo.write("  \n")
+                    fo.flush()
 
 
 # ----------------------------------------------------------------------------------------------------------------------
