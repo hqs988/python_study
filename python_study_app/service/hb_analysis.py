@@ -2,7 +2,7 @@
 
 import requests
 import time
-
+import notify
 # ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些全局变量
 # ----------------------------------------------------------------------------------------------------------------------
@@ -120,6 +120,10 @@ def f_algorithm_1():
                     fo.write(str(dict[vl_eth_symbols_list[i]]))
                     fo.write("  \n")
                     fo.flush()
+                    # 钉钉通知
+                    vl_output = vl_eth_symbols_list[i] + " " + time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())) + " " + str(dict[vl_eth_symbols_list[i]])
+                    notify.send_dingding_message(vl_output)
+
 
 
 # ----------------------------------------------------------------------------------------------------------------------
