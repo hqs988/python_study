@@ -108,9 +108,8 @@ def f_algorithm_1():
         value = dict[vl_eth_symbols_list[i]]
 
         # step 2:进行逻辑判断
-        '''
-        if float(value[0]) < float(value[3]) and float(value[3]) < float(value[5]) and float(value[5]) < float(value[7]) and float(value[7])<float(value[9]):
-            if float(value[0])*1.05 < float(value[9]):  # 1.05
+        if float(value[0]) < float(value[1]) and float(value[1]) < float(value[2]) and float(value[2]) < float(value[3]) and float(value[3])<float(value[4]):
+            if float(value[0]) * 1.05 < float(value[4]):  # 1.05
                 # print("######")
                 #
                 # print(vl_eth_symbols_list[i])
@@ -123,20 +122,6 @@ def f_algorithm_1():
                 fo.write(str(dict[vl_eth_symbols_list[i]]))
                 fo.write("  \n")
                 fo.flush()
-        '''
-        if float(value[0]) * 1.05 < float(value[4]):  # 1.05
-            # print("######")
-            #
-            # print(vl_eth_symbols_list[i])
-            # print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
-            # print(dict[vl_eth_symbols_list[i]])
-            fo.write(vl_eth_symbols_list[i])
-            fo.write("  ")
-            fo.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
-            fo.write("  ")
-            fo.write(str(dict[vl_eth_symbols_list[i]]))
-            fo.write("  \n")
-            fo.flush()
 
 
 # ----------------------------------------------------------------------------------------------------------------------
