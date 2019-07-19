@@ -93,7 +93,7 @@ def f_update_dict_rtc_price():
             print("except " + str(i) + " " + vl_eth_symbols_list[i])
     print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
 
-
+# 过滤错误情况
 def f_algorithm_1():
     global vl_eth_symbols_list
     global dict
