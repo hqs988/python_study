@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f0c9d00-6300-411f-ab2f-3f667f683661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_study_app/service/notify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,23 +21,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="57">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documents/02_pycharm 与 git 结合 push到不同分支">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
-              <folding>
-                <element signature="e#25#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documents/01_django项目生成依赖文件requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -67,8 +69,8 @@
         <option value="$PROJECT_DIR$/python_study_app/service/analyses.py" />
         <option value="$PROJECT_DIR$/basic/list/2.py" />
         <option value="$PROJECT_DIR$/python_study_app/service/notify.py" />
-        <option value="$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py" />
         <option value="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" />
+        <option value="$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py" />
       </list>
     </option>
   </component>
@@ -256,7 +258,7 @@
       <workItem from="1563499259935" duration="3716000" />
       <workItem from="1563506180635" duration="48000" />
       <workItem from="1563518846732" duration="7381000" />
-      <workItem from="1563528287437" duration="1089000" />
+      <workItem from="1563528287437" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="# jason :　创建basic文件夹， 用于基础语法练习">
       <created>1563199940802</created>
@@ -370,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563525145681</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="# jason :　1. 增加notify.py 2. 在hb_analysis.py中增加钉钉通知机制 3.同时安装一些包">
+      <created>1563529474693</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563529474693</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38035000" />
+    <option name="totallyTimeSpent" value="38163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -389,18 +398,18 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11526232" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11526232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32371294" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32371294" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.1427457" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.50624025" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.2324493" />
@@ -467,7 +476,8 @@
     <MESSAGE value="# jason :　刷新一下" />
     <MESSAGE value="# jason :　hb_analysis.py 修改 algorithm_1 ， 过滤掉如下情况&#10;root@ubuntu:~/huobi1# cat foo.txt&#10;idteth  2019.07.18 22 54 59  [0, '0.00008295', '0.00008298', '0.00008299', '0.00008358']&#10;rteeth  2019.07.18 22 54 59  [0, '0.00000912', '0.00000913', '0.00000915', '0.00000919']&#10;wtceth  2019.07.18 22 54 59  [0, '0.00740700', '0.00740900', '0.00741900', '0.00746200']&#10;idteth  2019.07.18 23 48 37  ['0.00008437', '0.00008627', '0.00008845', '0.00009015', '0.00009251']&#10;lymeth  2019.07.19 00 46 45  ['0.00003920', '0.00004127', '0.00004192', '0.00004204', '0.00004315']" />
     <MESSAGE value="# jason :　hb_analysis.py 添加一些注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="# jason :　hb_analysis.py 添加一些注释" />
+    <MESSAGE value="# jason :　1. 增加notify.py 2. 在hb_analysis.py中增加钉钉通知机制 3.同时安装一些包" />
+    <option name="LAST_COMMIT_MESSAGE" value="# jason :　1. 增加notify.py 2. 在hb_analysis.py中增加钉钉通知机制 3.同时安装一些包" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python_study/urls.py">
@@ -501,34 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/documents/02_pycharm 与 git 结合 push到不同分支">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documents/01_django项目生成依赖文件requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_study_app/service/notify.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -541,11 +523,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+        <state relative-caret-position="1976">
+          <caret line="124" column="59" lean-forward="true" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="59" />
           <folding>
             <element signature="e#25#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/02_pycharm 与 git 结合 push到不同分支">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/01_django项目生成依赖文件requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/03_pip版本导致无法安装包的解决办法.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
