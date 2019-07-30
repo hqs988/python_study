@@ -2,11 +2,15 @@
 
 import requests
 import time
+import datetime
 import notify
+import _thread
+
 # ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些全局变量
 # ----------------------------------------------------------------------------------------------------------------------
 
+trade_flag = 0
 
 # currencys_url="https://api.huobi.br.com/market/history/kline?period=1min&size=200&symbol=xmxeth"
 
@@ -32,6 +36,7 @@ dict = {}  # 用于记录每个eth交易对，5个实时、最新的值，供不
 
 fo = open("foo.txt", "w")  # foo.txt 记录算法结果
 
+vl_tr  = open("trade_bill.txt", "w")  #
 
 # ----------------------------------------------------------------------------------------------------------------------
 # 这里定义一些函数
@@ -81,7 +86,8 @@ def f_update_dict_rtc_price():
     # print(vl_eth_symbols_list)
     # print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
     # for i in range(len(keys_list)):
-    for i in range(int(len(keys_list))):
+    # for i in range(int(len(keys_list))): # debug point
+    for i in range(int(len(keys_list)/50)):
         try:
             url = "https://api.huobi.br.com/market/history/kline?period=1min&size=2000&symbol=" + vl_eth_symbols_list[i]
             resp = requests.get(url)
@@ -95,24 +101,121 @@ def f_update_dict_rtc_price():
             print("except " + str(i) + " " + vl_eth_symbols_list[i])
     print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
 
+
+def f_trade(symbol, value):
+
+    print("Enter thread f_trade -------------------------------------------------------")
+    print("symbol = " + symbol)
+    print("value = " + str(value))
+    #print("index = " + str(index))   # debug point
+    global vl_tr
+
+    # --------------------------------------------------------------------------
+    # 下单
+    # --------------------------------------------------------------------------
+    # TODO : 买入
+    vl_tr.write("买入:"+symbol)
+    vl_tr.write("  ")
+    vl_tr.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
+    vl_tr.write("  ")
+    vl_tr.write(str(value))
+    vl_tr.write("  \n")
+    vl_tr.flush()
+    # ----------------------
+    # 钉钉通知
+    # ----------------------
+    vl_output = "买入" + symbol + " " + time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())) + " " + str(value)
+    notify.send_dingding_message(vl_output)
+
+    start_time = datetime.datetime.now()
+
+    # --------------------------------------------------------------------------
+    # 监听、卖出 算法
+    # --------------------------------------------------------------------------
+    # TODO + 执行卖出 操作
+    while 1:
+        # 获取当前值
+        try:
+            url = "https://api.huobi.br.com/market/history/kline?period=1min&size=2000&symbol=" + symbol
+            resp = requests.get(url)
+            r_json = resp.json()
+            data = r_json['data']
+            rc = data[0]
+            rc = as_num(rc["close"])
+            # 执行下单-卖出
+            # TODO
+            print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
+
+            #根据当前值进行算法分析
+
+            # 对时间进行判断
+            end_time = datetime.datetime.now()
+            diff_sec = (end_time - start_time).seconds
+
+            if diff_sec < 300 :
+                if rc > value*1.03:
+                    print("卖出")
+                    vl_tr.write("卖出 " + symbol + " ")
+                    vl_tr.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
+                    vl_tr.write("   价格:"+str(rc))
+                    vl_tr.write(" 百分比= " + str((float(rc) - float(value)) / float(value)))
+                    fo.write("  \n")
+                    vl_tr.flush( )
+
+                    vl_output = "买出" + symbol + " " + time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())) + " " + str(rc)
+                    notify.send_dingding_message(vl_output)
+
+                    trade_flag = 0
+                    exit()
+            else:
+                print("卖出")
+                vl_tr.write("卖出 " + symbol + " ")
+                vl_tr.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
+                vl_tr.write("   价格:" + str(rc))
+                vl_tr.write(" 百分比= " + str((float(rc) - float(value))/float(value)))
+                fo.write("  \n")
+                vl_tr.flush( )
+                vl_output = "买出 " + symbol + " " + time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())) + " " + str(rc)
+                notify.send_dingding_message(vl_output)
+                trade_flag = 0
+                exit()
+        except:
+            print("except 下单故障 " + symbol)
+            trade_flag = 0
+            exit( )
+        time.sleep(10)
+
+
+
+    # 退出 线程
+
+
+
+
+
 # 算法分析1
-def f_algorithm_1():
+def f_algorithm_1( ):
     global vl_eth_symbols_list
     global dict
     global fo
+    global trade_flag
     keys_list = dict.keys()
 
     # 每一次循环， 针对每一个交易对的5个记录，进行算法处理.
-    # print("-------------------------------------------------------")
+    print("Enter function f_algorithm -------------------------------------------------------")
     for i in range(len(keys_list)):
         # step 1: 读取当前交易对的 5个值
 
         value = dict[vl_eth_symbols_list[i]]
 
         # step 2:进行逻辑判断
-        if float(value[0]) < float(value[1]) and float(value[1]) < float(value[2]) and float(value[2]) < float(value[3]) and float(value[3])<float(value[4]):
+
+        if float(value[0]) < float(value[1]) and float(value[1]) < float(value[2]) and float(value[2]) < float(value[3]) and float(value[3])<float(value[4]):  # debug point
             if float(value[0]) * 1.05 < float(value[4]):  # 1.05
-                if float(value[0]) != 0:  # 过滤掉此处情况  [0] = 0   [1] [2] [3] [4]----> 递增
+                if float(value[0]) != 0:  # 过滤掉此处情况  [0] = 0   [1] [2] [3] [4]----> 递增 , 至此分支判断也满足时， 表示，进入交易状态
+                    # --------------------------------------------------------------------------
+                    # 写入本地文件，进行记录
+                    # --------------------------------------------------------------------------
                     fo.write(vl_eth_symbols_list[i])
                     fo.write("  ")
                     fo.write(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
@@ -120,9 +223,24 @@ def f_algorithm_1():
                     fo.write(str(dict[vl_eth_symbols_list[i]]))
                     fo.write("  \n")
                     fo.flush()
+                    # --------------------------------------------------------------------------
                     # 钉钉通知
+                    # --------------------------------------------------------------------------
                     vl_output = vl_eth_symbols_list[i] + " " + time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())) + " " + str(dict[vl_eth_symbols_list[i]])
                     notify.send_dingding_message(vl_output)
+                    # --------------------------------------------------------------------------
+                    # 进行交易命令
+                    # --------------------------------------------------------------------------
+                    # 判断是否进入买入状态, 如果已经处于买入状态 ， 则不再进行买入操作。如果没有买入，则进行买入
+                    if trade_flag == 0:
+                        print("创建线程 " + vl_eth_symbols_list[i])
+                        _thread.start_new_thread(f_trade, (vl_eth_symbols_list[i], value[4],))  # 参数1：交易对名称， 叁数2:当前价格， 参数3：在字典中的索引
+                        trade_flag = 1
+
+
+
+
+
 
 
 
@@ -152,5 +270,6 @@ while 1:
     while 1:
         f_update_dict_rtc_price()
         f_algorithm_1()
+
 
     time.sleep(6)
