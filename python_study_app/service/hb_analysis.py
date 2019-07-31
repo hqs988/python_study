@@ -86,8 +86,8 @@ def f_update_dict_rtc_price():
     # print(vl_eth_symbols_list)
     # print(time.strftime('%Y.%m.%d %H %M %S', time.localtime(time.time())))
     # for i in range(len(keys_list)):
-    # for i in range(int(len(keys_list))): # debug point
-    for i in range(int(len(keys_list)/50)):
+    for i in range(int(len(keys_list))): # debug point
+    # for i in range(int(len(keys_list)/50)):
         try:
             url = "https://api.huobi.br.com/market/history/kline?period=1min&size=2000&symbol=" + vl_eth_symbols_list[i]
             resp = requests.get(url)

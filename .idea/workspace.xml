@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py" line="89" mnemonic="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0c9d00-6300-411f-ab2f-3f667f683661" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="8f0c9d00-6300-411f-ab2f-3f667f683661" name="Default Changelist" comment="# jason :　1. 修改f_algorithm(),  增加线程 f_trade(), &#10;           2. 增加功能，f_algorithm()负责实时更新，并判断某个交易对是否触发 买入交易。 &#10;           3. f_trade()负责买入，并负责监听、买入的交易对的实时状态，达到卖出点时， 进行卖出交易，并结束线程&#10;           4. 有某个交易对 处于买入状态时， 其它其它交易对则不能进行交易。 只有退出交易状态，其他交易对才能进行交易。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_study_app/service/foo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python_study_app/service/foo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_study_app/service/hb_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/dependency_links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/dependency_links.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/entry_points.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/entry_points.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/requires.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/EGG-INFO/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/pip/_vendor/certifi/cacert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.6.egg/pip/_vendor/certifi/cacert.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,24 +23,15 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="185" column="22" lean-forward="true" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
+            <state relative-caret-position="346">
+              <caret line="88" column="54" lean-forward="true" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
               <folding>
                 <element signature="e#25#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python_study_app/service/trade_bill.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -98,7 +82,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,6 +109,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +256,9 @@
       <workItem from="1563518846732" duration="7381000" />
       <workItem from="1563528287437" duration="1217000" />
       <workItem from="1564390272817" duration="1322000" />
-      <workItem from="1564397192302" duration="21007000" />
+      <workItem from="1564397192302" duration="21971000" />
+      <workItem from="1564536640876" duration="66000" />
+      <workItem from="1564536729232" duration="895000" />
     </task>
     <task id="LOCAL-00001" summary="# jason :　创建basic文件夹， 用于基础语法练习">
       <created>1563199940802</created>
@@ -393,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563529474693</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="# jason :　1. 修改f_algorithm(),  增加线程 f_trade(), &#10;           2. 增加功能，f_algorithm()负责实时更新，并判断某个交易对是否触发 买入交易。 &#10;           3. f_trade()负责买入，并负责监听、买入的交易对的实时状态，达到卖出点时， 进行卖出交易，并结束线程&#10;           4. 有某个交易对 处于买入状态时， 其它其它交易对则不能进行交易。 只有退出交易状态，其他交易对才能进行交易。">
+      <created>1564495829259</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564495829260</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60492000" />
+    <option name="totallyTimeSpent" value="62417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,21 +402,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11685215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39235568" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39235568" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.24336973" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.11713666" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.4352574" />
@@ -491,7 +484,8 @@
     <MESSAGE value="# jason :　hb_analysis.py 修改 algorithm_1 ， 过滤掉如下情况&#10;root@ubuntu:~/huobi1# cat foo.txt&#10;idteth  2019.07.18 22 54 59  [0, '0.00008295', '0.00008298', '0.00008299', '0.00008358']&#10;rteeth  2019.07.18 22 54 59  [0, '0.00000912', '0.00000913', '0.00000915', '0.00000919']&#10;wtceth  2019.07.18 22 54 59  [0, '0.00740700', '0.00740900', '0.00741900', '0.00746200']&#10;idteth  2019.07.18 23 48 37  ['0.00008437', '0.00008627', '0.00008845', '0.00009015', '0.00009251']&#10;lymeth  2019.07.19 00 46 45  ['0.00003920', '0.00004127', '0.00004192', '0.00004204', '0.00004315']" />
     <MESSAGE value="# jason :　hb_analysis.py 添加一些注释" />
     <MESSAGE value="# jason :　1. 增加notify.py 2. 在hb_analysis.py中增加钉钉通知机制 3.同时安装一些包" />
-    <option name="LAST_COMMIT_MESSAGE" value="# jason :　1. 增加notify.py 2. 在hb_analysis.py中增加钉钉通知机制 3.同时安装一些包" />
+    <MESSAGE value="# jason :　1. 修改f_algorithm(),  增加线程 f_trade(), &#10;           2. 增加功能，f_algorithm()负责实时更新，并判断某个交易对是否触发 买入交易。 &#10;           3. f_trade()负责买入，并负责监听、买入的交易对的实时状态，达到卖出点时， 进行卖出交易，并结束线程&#10;           4. 有某个交易对 处于买入状态时， 其它其它交易对则不能进行交易。 只有退出交易状态，其他交易对才能进行交易。" />
+    <option name="LAST_COMMIT_MESSAGE" value="# jason :　1. 修改f_algorithm(),  增加线程 f_trade(), &#10;           2. 增加功能，f_algorithm()负责实时更新，并判断某个交易对是否触发 买入交易。 &#10;           3. f_trade()负责买入，并负责监听、买入的交易对的实时状态，达到卖出点时， 进行卖出交易，并结束线程&#10;           4. 有某个交易对 处于买入状态时， 其它其它交易对则不能进行交易。 只有退出交易状态，其他交易对才能进行交易。" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python_study/urls.py">
@@ -561,17 +555,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_study_app/service/trade_bill.txt">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        <state relative-caret-position="38">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/python_study_app/service/trade_bill.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/python_study_app/service/hb_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="185" column="22" lean-forward="true" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
+        <state relative-caret-position="346">
+          <caret line="88" column="54" lean-forward="true" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
           <folding>
             <element signature="e#25#40#0" expanded="true" />
           </folding>
